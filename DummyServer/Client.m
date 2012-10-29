@@ -16,6 +16,8 @@
 @implementation Client {
     NSConnection *_connection;
     ClientObj *_client;
+    
+    NSTimer *_timer;
 }
 
 - (void)start {
@@ -29,13 +31,18 @@
     [server registerClient:_client];
 
     // add server chatter
-    NSTimer *timer = [NSTimer timerWithTimeInterval:PING_DELAY
-                                             target:self
-                                           selector:@selector(chatterTimerDidFire:)
-                                           userInfo:nil
-                                            repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    _timer = [NSTimer timerWithTimeInterval:PING_DELAY
+                                     target:self
+                                   selector:@selector(chatterTimerDidFire:)
+                                   userInfo:nil
+                                    repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
+
+- (void)dealloc {
+    [_timer invalidate];
+}
+
 
 - (void)chatterTimerDidFire:(NSTimer *)timer {
     @try {

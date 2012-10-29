@@ -16,6 +16,8 @@
 @implementation Server {
     NSConnection *_connection;
     ServerObj *_server;
+    
+    NSTimer *_timer;
 }
 
 - (void)start {
@@ -27,13 +29,16 @@
     [_connection setRootObject:_server];
 
     // start client keepalive pings
-    NSTimer *keepalive = [NSTimer timerWithTimeInterval:PING_DELAY
-                                                 target:self
-                                               selector:@selector(keepaliveTimerDidFire:)
-                                               userInfo:nil
-                                                repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:keepalive
-                                 forMode:NSRunLoopCommonModes];
+    _timer = [NSTimer timerWithTimeInterval:PING_DELAY
+                                     target:self
+                                   selector:@selector(keepaliveTimerDidFire:)
+                                   userInfo:nil
+                                    repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)dealloc {
+    [_timer invalidate];
 }
 
 
