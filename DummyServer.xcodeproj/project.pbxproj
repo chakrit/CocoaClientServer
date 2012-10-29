@@ -23,7 +23,6 @@
 		22287B48163E5358002F1D46 /* Conversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 22287B47163E5358002F1D46 /* Conversation.m */; };
 		22287B49163E565C002F1D46 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 22287B3B163E4F9C002F1D46 /* Client.m */; };
 		22287B4A163E565F002F1D46 /* Conversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 22287B47163E5358002F1D46 /* Conversation.m */; };
-		229B9C04163E7E0600E7A5AB /* ClientInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 229B9C03163E7E0600E7A5AB /* ClientInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,8 +63,6 @@
 		22287B43163E4FF9002F1D46 /* Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
 		22287B46163E5358002F1D46 /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversation.h; sourceTree = "<group>"; };
 		22287B47163E5358002F1D46 /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversation.m; sourceTree = "<group>"; };
-		229B9C02163E7E0600E7A5AB /* ClientInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientInfo.h; sourceTree = "<group>"; };
-		229B9C03163E7E0600E7A5AB /* ClientInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,12 +122,10 @@
 			children = (
 				22287B16163E46B0002F1D46 /* DummyServer.1 */,
 				22287B3A163E4F9C002F1D46 /* Client.h */,
-				229B9C02163E7E0600E7A5AB /* ClientInfo.h */,
 				22287B46163E5358002F1D46 /* Conversation.h */,
 				22287B28163E4A74002F1D46 /* Server.h */,
 				22287B43163E4FF9002F1D46 /* Shared.h */,
 				22287B3B163E4F9C002F1D46 /* Client.m */,
-				229B9C03163E7E0600E7A5AB /* ClientInfo.m */,
 				22287B47163E5358002F1D46 /* Conversation.m */,
 				22287B26163E48F5002F1D46 /* main.m */,
 				22287B29163E4A74002F1D46 /* Server.m */,
@@ -211,7 +206,6 @@
 				22287B2A163E4A74002F1D46 /* Server.m in Sources */,
 				22287B3C163E4F9C002F1D46 /* Client.m in Sources */,
 				22287B48163E5358002F1D46 /* Conversation.m in Sources */,
-				229B9C04163E7E0600E7A5AB /* ClientInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
